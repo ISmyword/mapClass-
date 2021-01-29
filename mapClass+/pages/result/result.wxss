@@ -1,0 +1,52 @@
+.r-image{
+  position: relative;
+  width: 660rpx;
+  height: 440rpx;
+  margin: 30rpx 45rpx;
+  color: #090909;
+  font-weight: 600;
+  
+}
+.r-image image{
+  width: 100%;
+  height: 100%;
+}
+.des{
+  position: absolute;
+  top:64rpx;
+  left: 70rpx;
+  font-size: 32rpx;
+
+}
+.fraction{
+  position: absolute;
+  top:126rpx;
+  left: 110rpx;
+  font-size: 56rpx;
+  font-weight: 550;
+}
+.proposal{
+  width: 660rpx;
+  margin: 48rpx auto;
+  color: #646464;
+  font-size: 30rpx;
+  text-align: left;
+}
+.proposal view{
+  text-indent: 60rpx;
+}
+.return{
+  position: absolute;
+  width: 660rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  bottom: 30rpx;
+  background: #ffb72b;
+  font-size: 30rpx;
+  margin: 0 auto 0 50%;
+  border-radius: 10rpx;
+  text-align: center;
+  font-weight: 550;
+  left: -330rpx;
+  color: #222222;
+}

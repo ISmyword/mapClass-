@@ -1,0 +1,53 @@
+<!--pages/publicService/publicService.wxml-->
+<view class="container">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text>满恩母婴</text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="section">
+
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        <view class="section-box fl">
+          {{region[0]}}
+        </view>
+        <view class="section-box fl">
+          {{region[1]}}
+        </view>
+        <view class="section-box fl">
+          {{region[2]}}
+        </view>
+      </view>
+    </picker>
+  </view>
+  <!-- 想法 做一个返回操作 前往满恩母婴进行预约操作 -->
+  <view class="datanone" wx:if="{{publicServiceList1.length==0}}">暂无数据</view>
+  <view wx:elif="{{publicServiceList1.length>0}}">
+    <block wx:for-index="index" wx:for-item="item" wx:for="{{publicServiceList1}}">
+      <view class="list-i">
+        <view class="list-left fl">
+          <image src="{{item.imageSrc}}"></image>
+        </view>
+        <view class="list-info fl">
+          <view class="list-info-title oneLine"><text>{{item.title}}</text></view>
+          <view class="list-info-time oneLine"><text>{{item.startTime}}-{{item.endTime}}</text></view>
+          <view class="list-info-address oneLine">{{item.address}}</view>
+          <block wx:if="{{time <= item.endTime}}">
+            <view class="list-button begin" bindtap="goToManen" data-id="{{item.id}}">预约</view>
+          </block>
+          <block wx:else>
+            <view class="list-button done" >已结束</view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

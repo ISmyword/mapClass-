@@ -1,0 +1,91 @@
+/* pages/timetable/timetable.wxss */
+.searchInput {
+  float: left;
+  width: 480rpx;
+  line-height: 75rpx;
+  margin: 30rpx 0 10rpx 50rpx;
+}
+
+.searchInput .input1 {
+  width: 480rpx;
+  height: 75rpx;
+  padding-left: 35rpx;
+  margin: 0rpx auto;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  background-color: #e3e3e3;
+
+}
+
+.searchButton {
+  width: 120rpx;
+  float: left;
+  height: 75rpx;
+  line-height: 75rpx;
+  margin: 30rpx 0 5rpx 37rpx;
+  color: #008aff;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  background-color: #e3e3e3;
+  text-align: center;
+}
+
+.pageList {}
+
+.list1 {
+  background-color: #ffffff;
+}
+
+.list1 view {
+  border-left: 1px solid #ebebeb;
+}
+
+.list2 {
+  background-color: #ebebeb;
+}
+
+.list2 view {
+  border-left: 1px solid #ffffff;
+}
+
+
+.list-i {
+  width: 750rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: center;
+  margin: 30rpx 0;
+  font-size: 22rpx;
+  padding: 0 10rpx;
+}
+
+.list-i .list-i-x {
+  width: 80rpx;
+
+}
+
+.list-i .list-i-k {
+  width: 230rpx;
+}
+
+.list-i .list-i-j {
+  width: 130rpx;
+}
+
+.list-i .list-i-t {
+  width: 150rpx;
+}
+
+.list-i .list-i-o {
+  width: 130rpx;
+}
+
+.details-button {
+  width: 80rpx !important;
+  height: 40rpx !important;
+  line-height: 40rpx !important;
+  margin: 12.5rpx 25rpx;
+  border-radius: 5rpx;
+  color: #ffffff;
+  background-color: #ff647a;
+}

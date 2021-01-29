@@ -1,0 +1,36 @@
+<!--pages/commodityDetail/commodityDetail.wxml-->
+<!-- 商品详情页面 -->
+<view class="container">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text>{{commodityName}}</text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-top">
+      <!-- <view class="community-image">
+        <image src="https://b2c-1253690476.file.myqcloud.com/202006/5728444025721204/sourcefile/015c76bfc02747dcad635e5be9a144c1.PNG"></image>
+      </view> -->
+      <view class="community-video">
+        <video src="" autoplay="false" duration="10"></video>
+      </view>
+      
+    </view>
+
+    <view>
+      <view class="tabNav">
+          <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}"><text>{{item}}</text></view>
+      </view>
+      <view class="orderInfo">
+        <view class="orderInfo-item" wx:for="{{sendList}}" wx:key="index"> 这是内容{{item.content}} </view> 
+      </view>
+    </view>
+  </view>
+</view>

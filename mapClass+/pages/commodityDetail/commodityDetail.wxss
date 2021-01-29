@@ -1,0 +1,23 @@
+/* pages/commodityDetail/commodityDetail.wxss */
+.head-title{
+  width: 590rpx;
+  margin-right: 80rpx;
+  text-align: center;
+}
+.content-top{
+  width: 750rpx;
+  height: 560rpx;
+}
+.content-top image{
+  width: 750rpx;
+  height: 560rpx;
+}
+.content-top video{
+  width: 750rpx;
+  height: 560rpx;
+}
+.tabNav{z-index: 4;  width:750rpx; height:80rpx; line-height: 80rpx; background: #fff; display: flex; padding:0 30rpx; border-bottom:1px solid #f5f5f5; box-sizing: border-box; }
+.tabNav> view{text-align: center; margin-right:50rpx;}
+.tabNav> view:last-child{ margin-right: 0;}
+.tabNav> view text{padding:0 15rpx; height:75rpx; display:inline-block;}
+.tabNav .cur text{ border-bottom:5rpx solid #36ccf9; color:#000;}

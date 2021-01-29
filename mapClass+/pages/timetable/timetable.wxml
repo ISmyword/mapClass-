@@ -1,0 +1,40 @@
+<!--pages/timetable/timetable.wxml-->
+<view class="container">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text>满恩母婴</text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+
+  <view class="pageTop">
+    <view class="searchInput"><input class="input1" bindinput="bindInput" value="{{keywords}}"
+        placeholder="{{inputTxtt}}" /></view>
+    <view class="searchButton" bindtap="doSearch">搜索</view>
+
+  </view>
+  <view class="pageList">
+    <view class="list-i">
+      <view class="fl list-i-x">序号</view>
+      <view class="fl list-i-k borderl">课程主题</view>
+      <view class="fl list-i-j borderl">讲师</view>
+      <view class="fl list-i-t borderl">时间</view>
+      <view class="fl list-i-o borderl">操作</view>
+    </view>
+    <block wx:for-index="index" wx:for-item="item" wx:for="{{timetableList2}}">
+      <view class="list-i {{item.isGrey ? 'list1' : 'list2'}}">
+        <view class="fl list-i-x">{{item.id}}</view>
+        <view class="fl list-i-k borderl">{{item.title}}</view>
+        <view class="fl list-i-j borderl">{{item.author}}</view>
+        <view class="fl list-i-t borderl">{{item.time}}</view>
+        <view class="fl list-i-o borderl details-button" bindtap="goToPlace" data-classid="{{item.classid}}" data-mapid="{{item.mapid}}">详情</view>
+      </view>
+    </block>
+  </view>
+</view>

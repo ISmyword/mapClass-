@@ -1,0 +1,129 @@
+/**index.wxss**/
+.container3 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0;
+  box-sizing: border-box;
+} 
+.head{
+  position: fixed;
+  width: 100%;
+  height: 90rpx;
+  background-color: #ffc75b;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.head-back{
+  position: absolute;
+  width: 35rpx;
+  height: 35rpx;
+  margin: 25rpx 25rpx;
+  z-index: 2;
+
+}
+.head-title {
+  float: left;
+  width: 670rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  margin-left: 80rpx;
+  text-align: left;
+  color: #ffffff;
+  font-size: 35rpx;
+}
+.con-view{
+  width: 660rpx;
+  padding: 0 45rpx 30rpx;
+  color: #222222;
+
+
+}
+.describe{
+  padding: 62rpx 0;
+  border-bottom: 1px solid #ffc75b;
+}
+
+.title{
+  display: block;
+  width: 660rpx;
+  font-size: 36rpx;
+  font-weight: 550;
+  text-align: center;
+  margin-bottom: 70rpx;
+}
+.con{
+  line-height: 44rpx;
+  font-size: 28rpx;
+  text-indent: 56rpx;
+}
+radio .wx-radio-input{
+  border-radius:50%;
+  width:28rpx;
+  height:28rpx;
+  margin-top: -3rpx;
+}
+.choice{
+  margin-top:70rpx;
+}
+.choice-title{
+  font-weight: 550;
+  font-size: 30rpx;
+
+}
+.choice-radio{
+  font-size: 26rpx;
+  margin-bottom: 74rpx;
+}
+.choice-radio__hd{
+  margin: 10rpx 0 0rpx 0rpx;
+  padding: 0rpx 0 0rpx 20rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+}
+.choice-radio__bd{
+  display: inline-block;
+  color: #606060;
+}
+.isckeck{
+  color: #222222;
+}
+.submit{
+  width: 660rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #ffb72b;
+  font-size: 30rpx;
+  margin: 0 auto 0rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  font-weight: 550;
+  color: #222222;
+}
+.page-pop{
+  position: absolute; 
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  z-index:998;
+  background: #222222;
+}
+.popup{
+  position: fixed; 
+  width: 600rpx;
+  height: 416.4rpx;
+  border-radius: 10rpx;
+  top: 0;
+  left: -300rpx;
+  margin: 50% 0 0 50%;
+  z-index:999;
+}
+.popup image{
+  width: 100%;
+  height: 100%;
+}

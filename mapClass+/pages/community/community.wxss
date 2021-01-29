@@ -1,0 +1,49 @@
+/* pages/community/community.wxss */
+.content-QRCode{
+  width: 750rpx;
+}
+.content-QRCode-image{
+  width: 415rpx;
+  height: 415rpx;
+  margin: 30rpx 167.5rpx;
+}
+.content-text{
+  width: 750rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #b8b8b8;
+  overflow: hidden;
+}
+.phonenumber{
+  width: 330rpx;
+  margin-left: 150rpx;
+}
+.copyButton{
+  width: 120rpx;
+  height: 60rpx;
+  background: #f3f3f3;
+  color: #b99aca;
+  border-radius: 30rpx;
+}
+.operation{
+  width: 750rpx;
+  height: 165rpx;
+  margin-top: 30rpx;
+}
+.savepic{
+  width: 250rpx;
+  height: 125rpx;
+  line-height: 125rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  color: #ffffff;
+  background: #d24c74;
+  margin: 0 62.5rpx;
+  font-size: 30rpx;
+}
+.canvas{
+  width: 415rpx;
+  height: 415rpx;
+  
+}

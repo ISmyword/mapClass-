@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container3" >
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text></text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  
+  <scroll-view scroll-y scroll-top='{{topNum}}' style="margin-top:90rpx;padding-top:{{statusBarHeight}}px">
+    <view class="con-view" style="">
+      <view class="describe">
+        <text class="title">爱丁堡产后抑郁量表(EPDS)</text>
+        <view class="con">
+        亲爱的产后妈妈，这是一份专业的产后抑郁自测表（EPDS），为了更好地了解目前自己的心境状况，请认真填写，测试时间约为5分钟。</view>
+        <view class="con" >
+        请选择一个最能反映您过去七天内的真实感受的答案，而不是今天您的感受。比如：“我感觉我是开心的”，这句话是指“我在大多时候都是开心的”。</view>
+      </view>
+      <view class="choice">
+        <view>
+          <block wx:for="{{adbcItems}}" wx:for-item="adbcItem" wx:for-index="index">
+            <view class="choice-title">{{adbcItem.title}}</view>
+            <view class="choice-radio">
+              <radio-group bindchange="radioChange" data-radioid="{{index}}">
+                <label class="weui-check__label" wx:for="{{adbcItem.choice}}" wx:key="{{item.value}}" wx:for-item="item">
+                  <view class="choice-radio__hd" style="background: {{item.checked?'#fff7dd':''}}">
+                    <radio value="{{item.value}}" checked="{{item.checked}}" color="#ffc75b"/>
+                    <view class="choice-radio__bd {{item.checked?'isckeck':''}}">{{item.name}}</view>
+                  </view>
+                </label>
+              </radio-group>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view >
+        <view class="submit" bindtap="submit">提交</view>
+      </view>
+
+    </view>
+  </scroll-view>
+
+  <!-- 遮罩 -->
+  <view class="page-pop" style="display: {{isShowPop?'block':'none'}};height: {{height}}rpx">
+
+  </view>
+  <view class="popup" style="display: {{isShowPop?'block':'none'}};top:{{windowHeigth/2}}rpx;margin-top:-173.5rpx;">
+    <image src="../../images/pop.png"></image>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<!--pages/community/community.wxml-->
+<view class="container">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text>满恩母婴</text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-QRCode">
+      <image class="content-QRCode-image" src="{{imageSrc}}"></image>
+      <view class="content-text">
+        <view class="fl phonenumber">
+          <text>微信号: </text>
+          <text>{{wxnumber}}</text>
+        </view>
+
+        <view class="copyButton fl" bindtap="copyText">复制</view>
+      </view>
+      <view class="content-text">
+        <text>加管理员微信（备注：{{remarks}}）</text>
+      </view>
+      <view class="content-text">申请加入妈妈群</view>
+    </view>
+  </view>
+  <view class="operation">
+    <view class="savepic fl" bindtap="saveImageToPhotos">保存图片</view>
+    <view class="savepic fl" bindtap="openSetting">授权设置</view>
+  </view>
+</view>

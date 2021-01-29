@@ -1,0 +1,115 @@
+<!--index.wxml-->
+<view class="container2" style="height: {{windowHeigth}}rpx">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="goToManEn" class="head-back" src="../../images/back2.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text></text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="con-view">
+    <view class="con-top">
+      <image class="backg" src="../../images/bacg.png"></image>
+      <view class="title">
+        <text>孕妇增重计算器</text>
+      </view>
+      <view class="des">
+        <view>
+        准妈妈孕前体重情况不同，整个孕期体重增长标准也各不相同。准妈妈可以根据孕前体重，按以下公式计算自己的BMI指数，确定孕期的增重标准。</view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="con-work" style="height: {{viewHeight}}rpx; " >
+      <block wx:if="{{isShow}}">
+        <view class="con-work-box" >
+          <view class="c-li">
+            <view class="c-label">
+              <image src="../../images/icon.png"></image>
+              <text>孕前身高 （厘米）</text>
+            </view>
+            <view class="c-input">
+              <input placeholder-class="phcolor" value="{{height}}" placeholder="输入您的孕前身高" type="digit" bindinput="bindKeyInputHeight"></input>
+              <text class="company">cm</text>
+            </view>
+          </view>
+          <view class="c-li">
+            <view class="c-label">
+              <image src="../../images/icon.png"></image>
+              <text>孕前体重 （千克）</text>
+            </view>
+            <view class="c-input">
+              <input placeholder-class="phcolor" value="{{weight}}" placeholder="输入您的孕前体重" type="digit" bindinput="bindKeyInputWeight"></input>
+              <text class="company">kg</text>
+            </view>
+          </view>
+          
+          <view class="button" bindtap="calculation" style="background:{{color}}">立即计算</view>
+          <view class="c-ps"><text>注意: 此评测适用于单胎孕妇</text></view>
+        </view>
+      </block>
+      <block wx:elseif>
+        <view class="loading" animation="{{slide_up2}}"><image src="../../images/loading.gif"></image></view>
+      </block>
+    </view>
+    <!--  -->
+    <view class="con-work" style="height: {{viewHeight}}rpx; top:{{windowHeigth}}rpx" animation="{{slide_up1}}">
+      <view class="con-work-box">
+        <view class="c-li-2 ">
+          <view class="c-li-dl">
+            <view>
+              <text class="title">孕前身材</text>
+            </view>
+            <view>
+              <text class="des">{{yqsc}}</text>
+            </view>
+          </view>
+          <view class="c-li-dl">
+            <view>
+              <text class="title">BMI指数</text>
+            </view>
+            <view>
+              <text class="des">{{BMINub}}</text>
+            </view>
+          </view>
+          <view class="c-li-dl">
+            <view>
+              <text class="title">孕期增重标准</text>
+            </view>
+            <view>
+              <text class="des">{{standard}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="c-li proposal">
+          <view class="c-li-dl p-li">
+            <text class="title">增重建议</text>
+          </view>
+          <view class="p-li">
+            <text class="des" decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{proposal}}</text>
+          </view>
+        </view>
+        <view class="c-li info">
+          <view class=" i-li">
+            <text class="title">孕前体重</text>
+            <text class="des">{{weight}}kg</text>
+          </view>
+          <view class=" i-li">
+            <text class="title">孕前身高</text>
+            <text class="des">{{height}}cm</text>
+          </view>
+          <view class=" i-li">
+            <text class="title">BMI</text>
+            <text class="des">{{BMINub}}</text>
+          </view>
+        </view>
+        <view class="button button2" bindtap="return" >重新计算</view>
+        <!-- <view class="c-ps"><text>注意: 此评测适用于单胎孕妇</text></view> -->
+      </view>
+    </view>
+  </view> 
+</view>

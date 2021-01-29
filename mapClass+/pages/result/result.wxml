@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="head" style="padding-top:{{statusBarHeight}}px">
+    <view class="head-left">
+      <image bindtap="backIndex" class="head-back" src="../../images/back.png"></image>
+    </view>
+    <view class="head-title">
+      <!--小程序标题-->
+      <text></text>
+      <!-- <view class="head-report">
+        <image bindtap="gotoReport" src="../../utils/images/icon_presentation.png"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="con-view" style="margin-top:90rpx;padding-top:{{statusBarHeight}}px">
+    <view class="r-image">
+      <image src="{{s_image}}"></image>
+      <view class="des">
+        <text>计算总得分</text>
+      </view>
+      <view class="fraction">
+        <text>{{fraction}}分</text>
+      </view>
+    </view>
+    <view class="proposal">
+      <view>
+      {{proposal}}</view>
+    </view>
+  </view>
+  <view >
+      <view class="return" bindtap="backIndex">重新计算</view>
+    </view>
+</view>
